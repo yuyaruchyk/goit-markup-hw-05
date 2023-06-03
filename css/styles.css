@@ -129,10 +129,7 @@ button {
   color: var(--secondary-text-color);
 
   position: relative;
-
-  transition-property: color, opacity;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-link:hover {
@@ -154,7 +151,7 @@ button {
   position: absolute;
   opacity: 0;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   margin-top: 20px;
 }
 
@@ -444,11 +441,9 @@ button {
   justify-content: center;
   border: 1px solid #8e8f99;
   border-radius: 4px;
-}
 
-.customer-link {
   color: var(--icons-customers-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -544,9 +539,9 @@ button {
   padding: 12px 24px;
   border-radius: 4px;
   border: 1px solid var(--color-border-btn);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -626,7 +621,7 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  padding: 40px 32px 164px 32px;
+  padding: 40px 32px;
   background: var(--color-text-btn);
   top: 0;
   left: 0;
@@ -636,7 +631,8 @@ button {
   position: absolute;
 
   transform: translate(0, 100%);
-  transition: transform 250ms linear;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-portofolio-link:focus .overlay,
 .card-portofolio-link:hover .overlay {
@@ -661,12 +657,14 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  min-height: 584px;
   width: 408px;
-  height: 584px;
+
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn {
@@ -683,7 +681,8 @@ button {
 
   background: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn-icon {
@@ -692,11 +691,12 @@ button {
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
+  border: none;
   background-color: var(--color-hover-focus);
 }
 
-.modal-close-btn:hover .modal-close-btn-icon,
-.modal-close-btn:focus .modal-close-btn-icon {
+.modal-close-btn:hover.modal-close-btn-icon,
+.modal-close-btn:focus.modal-close-btn-icon {
   fill: var(--icons-color);
 }
 
