@@ -695,9 +695,9 @@ button {
   background-color: var(--color-hover-focus);
 }
 
-.modal-close-btn:hover.modal-close-btn-icon,
-.modal-close-btn:focus.modal-close-btn-icon {
-  fill: var(--icons-color);
+.modal-close-btn-icon:hover,
+.modal-close-btn-icon:focus {
+  fill: var(--background-color-main);
 }
 
 .backdrop.is-hidden {
