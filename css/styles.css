@@ -130,7 +130,7 @@ button {
 
   position: relative;
 
-  transition-property: all;
+  transition-property: color, opacity;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
